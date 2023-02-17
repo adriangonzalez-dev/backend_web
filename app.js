@@ -6,7 +6,7 @@ const { mailRouter } = require('./routes');
 
 //aplication Middlewares
 app.use(cors({
-    origin: process.env.URL_FRONTEND,
+    origin: process.env.URL_FRONTEND_DEV,
     optionsSuccessStatus: 200
 }));
 app.use(express.json());
