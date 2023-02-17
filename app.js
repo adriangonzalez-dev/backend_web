@@ -3,10 +3,12 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const { mailRouter } = require('./routes');
-const { configCors } = require('./config/cors');
 
 //aplication Middlewares
-app.use(cors(configCors));
+app.use(cors({
+    origin: process.env.URL_FRONTEND,
+    optionsSuccessStatus: 200
+}));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
