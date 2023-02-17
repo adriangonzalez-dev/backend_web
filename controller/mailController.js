@@ -26,7 +26,6 @@ module.exports = {
               });
               return res.status(200).json({
                 message: 'ok',
-                send
               })
         } catch (error) {
             console.log(error);
