@@ -30,8 +30,9 @@ module.exports = {
               })
         } catch (error) {
             console.log(error);
-            return res.status(500).json({
-                ok: 'false'
+            return res.status(400).json({
+                ok: 'false',
+                error
               })
         }
     }
